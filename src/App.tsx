@@ -1,6 +1,5 @@
 import React, { useCallback, useReducer, useRef } from 'react';
 import './App.css';
-import Lists from './Components/Lists';
 
 // const Box: React.FunctionComponent<{title:string}> = ({ title }) => {
 //   return <div></div>
@@ -31,7 +30,7 @@ function App() {
   const [todos, dispatch] = useReducer(reducer, []);
 
   const newTodoRef = useRef<HTMLInputElement>(null);
-  
+
   const onAddTodo = useCallback(() => {
     if (newTodoRef.current) {
       dispatch({
